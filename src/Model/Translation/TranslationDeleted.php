@@ -17,7 +17,7 @@ class TranslationDeleted implements CreatableFromArray
      * @param int    $status
      * @param string $message
      */
-    private function __construct(int $status, string $message)
+    private function __construct($status, $message)
     {
         $this->status = $status;
         $this->message = $message;
@@ -47,7 +47,7 @@ class TranslationDeleted implements CreatableFromArray
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage()
     {
         return $this->message;
     }
@@ -55,7 +55,7 @@ class TranslationDeleted implements CreatableFromArray
     /**
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus()
     {
         return $this->status;
     }

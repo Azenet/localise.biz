@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -56,14 +54,14 @@ final class HttpClientConfigurator
      */
     public function __construct(HttpClient $httpClient = null, UriFactory $uriFactory = null)
     {
-        $this->httpClient = $httpClient ?? HttpClientDiscovery::find();
-        $this->uriFactory = $uriFactory ?? UriFactoryDiscovery::find();
+        $this->httpClient = $httpClient ?: HttpClientDiscovery::find();
+        $this->uriFactory = $uriFactory ?: UriFactoryDiscovery::find();
     }
 
     /**
      * @return HttpClient
      */
-    public function createConfiguredClient(): HttpClient
+    public function createConfiguredClient()
     {
         $plugins = $this->prependPlugins;
 
@@ -80,7 +78,7 @@ final class HttpClientConfigurator
      *
      * @return HttpClientConfigurator
      */
-    public function setEndpoint(string $endpoint): self
+    public function setEndpoint($endpoint)
     {
         $this->endpoint = $endpoint;
 
@@ -92,7 +90,7 @@ final class HttpClientConfigurator
      *
      * @return HttpClientConfigurator
      */
-    public function appendPlugin(Plugin ...$plugin): self
+    public function appendPlugin(Plugin ...$plugin)
     {
         foreach ($plugin as $p) {
             $this->appendPlugins[] = $p;
@@ -106,7 +104,7 @@ final class HttpClientConfigurator
      *
      * @return HttpClientConfigurator
      */
-    public function prependPlugin(Plugin ...$plugin): self
+    public function prependPlugin(Plugin ...$plugin)
     {
         $plugin = array_reverse($plugin);
         foreach ($plugin as $p) {

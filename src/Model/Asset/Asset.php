@@ -117,7 +117,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->id;
     }
@@ -133,7 +133,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType()
     {
         return $this->type;
     }
@@ -149,7 +149,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -165,7 +165,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getContext(): string
+    public function getContext()
     {
         return $this->context;
     }
@@ -181,7 +181,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getNotes(): string
+    public function getNotes()
     {
         return $this->notes;
     }
@@ -197,7 +197,7 @@ class Asset implements CreatableFromArray
     /**
      * @return string
      */
-    public function getModified(): string
+    public function getModified()
     {
         return $this->modified;
     }
@@ -213,7 +213,7 @@ class Asset implements CreatableFromArray
     /**
      * @return int
      */
-    public function getTranslated(): int
+    public function getTranslated()
     {
         return $this->translated;
     }
@@ -229,7 +229,7 @@ class Asset implements CreatableFromArray
     /**
      * @return int
      */
-    public function getUntranslated(): int
+    public function getUntranslated()
     {
         return $this->untranslated;
     }
@@ -245,7 +245,7 @@ class Asset implements CreatableFromArray
     /**
      * @return int
      */
-    public function getIncomplate(): int
+    public function getIncomplate()
     {
         return $this->incomplate;
     }
@@ -261,7 +261,7 @@ class Asset implements CreatableFromArray
     /**
      * @return int
      */
-    public function getPlurals(): int
+    public function getPlurals()
     {
         return $this->plural;
     }
@@ -277,7 +277,7 @@ class Asset implements CreatableFromArray
     /**
      * @return array
      */
-    public function getTags(): array
+    public function getTags()
     {
         return $this->tags;
     }

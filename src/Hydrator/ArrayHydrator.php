@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -25,7 +23,7 @@ final class ArrayHydrator implements Hydrator
      *
      * @return array
      */
-    public function hydrate(ResponseInterface $response, string $class): array
+    public function hydrate(ResponseInterface $response, $class)
     {
         $body = $response->getBody()->__toString();
         if (0 !== strpos($response->getHeaderLine('Content-Type'), 'application/json')) {

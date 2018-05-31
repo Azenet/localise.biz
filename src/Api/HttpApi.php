@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -60,7 +58,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpGet(string $path, array $params = [], array $requestHeaders = []): ResponseInterface
+    protected function httpGet($path, array $params = [], array $requestHeaders = [])
     {
         if (count($params) > 0) {
             $path .= '?'.http_build_query($params);
@@ -80,7 +78,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpPost(string $path, array $params = [], array $requestHeaders = []): ResponseInterface
+    protected function httpPost($path, array $params = [], array $requestHeaders = [])
     {
         $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -96,7 +94,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpPostRaw(string $path, $body, array $requestHeaders = []): ResponseInterface
+    protected function httpPostRaw($path, $body, array $requestHeaders = [])
     {
         return $response = $this->httpClient->sendRequest(
             $this->requestBuilder->create('POST', $path, $requestHeaders, $body)
@@ -112,7 +110,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpPut(string $path, array $params = [], array $requestHeaders = []): ResponseInterface
+    protected function httpPut($path, array $params = [], array $requestHeaders = [])
     {
         $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -130,7 +128,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpPatch(string $path, array $params = [], array $requestHeaders = []): ResponseInterface
+    protected function httpPatch($path, array $params = [], array $requestHeaders = [])
     {
         $requestHeaders['Content-Type'] = 'application/json';
 
@@ -148,7 +146,7 @@ abstract class HttpApi
      *
      * @return ResponseInterface
      */
-    protected function httpDelete(string $path, array $params = [], array $requestHeaders = []): ResponseInterface
+    protected function httpDelete($path, array $params = [], array $requestHeaders = [])
     {
         $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
 

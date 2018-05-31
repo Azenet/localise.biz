@@ -133,7 +133,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->id;
     }
@@ -149,7 +149,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType()
     {
         return $this->type;
     }
@@ -165,7 +165,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getTranslated(): bool
+    public function getTranslated()
     {
         return $this->translated;
     }
@@ -181,7 +181,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getFlagged(): bool
+    public function getFlagged()
     {
         return $this->flagged;
     }
@@ -197,7 +197,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus()
     {
         return $this->status;
     }
@@ -213,7 +213,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getTranslation(): string
+    public function getTranslation()
     {
         return $this->translation;
     }
@@ -229,7 +229,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getRevision(): int
+    public function getRevision()
     {
         return $this->revision;
     }
@@ -237,7 +237,7 @@ class Translation implements CreatableFromArray
     /**
      * @param int $revision
      */
-    private function setRevision(int $revision)
+    private function setRevision($revision)
     {
         $this->revision = $revision;
     }
@@ -245,7 +245,7 @@ class Translation implements CreatableFromArray
     /**
      * @return int
      */
-    public function getComments(): int
+    public function getComments()
     {
         return $this->comments;
     }
@@ -253,7 +253,7 @@ class Translation implements CreatableFromArray
     /**
      * @param int $comments
      */
-    private function setComments(int $comments)
+    private function setComments($comments)
     {
         $this->comments = $comments;
     }
@@ -261,7 +261,7 @@ class Translation implements CreatableFromArray
     /**
      * @return string
      */
-    public function getModified(): string
+    public function getModified()
     {
         return $this->modified;
     }
@@ -277,7 +277,7 @@ class Translation implements CreatableFromArray
     /**
      * @return array
      */
-    public function getAuthor(): array
+    public function getAuthor()
     {
         return $this->author;
     }
@@ -293,7 +293,7 @@ class Translation implements CreatableFromArray
     /**
      * @return array
      */
-    public function getFlagger(): array
+    public function getFlagger()
     {
         return $this->flagger;
     }
@@ -309,7 +309,7 @@ class Translation implements CreatableFromArray
     /**
      * @return array
      */
-    public function getLocale(): array
+    public function getLocale()
     {
         return $this->locale;
     }
@@ -325,7 +325,7 @@ class Translation implements CreatableFromArray
     /**
      * @return array
      */
-    public function getPlurals(): array
+    public function getPlurals()
     {
         return $this->plurals;
     }

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -24,7 +22,7 @@ final class NoopHydrator implements Hydrator
      *
      * @throws \LogicException
      */
-    public function hydrate(ResponseInterface $response, string $class)
+    public function hydrate(ResponseInterface $response, $class)
     {
         throw new \LogicException('The Noop Hydrator should never be called');
     }

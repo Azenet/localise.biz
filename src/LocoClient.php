@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -62,7 +60,7 @@ final class LocoClient
         HttpClientConfigurator $httpClientConfigurator,
         Hydrator $hydrator = null,
         RequestBuilder $requestBuilder = null
-    ): self {
+    ) {
         $httpClient = $httpClientConfigurator->createConfiguredClient();
 
         return new self($httpClient, $hydrator, $requestBuilder);
@@ -71,7 +69,7 @@ final class LocoClient
     /**
      * @return Api\Translation
      */
-    public function translations(): Api\Translation
+    public function translations()
     {
         return new Api\Translation($this->httpClient, $this->hydrator, $this->requestBuilder);
     }
@@ -79,7 +77,7 @@ final class LocoClient
     /**
      * @return Api\Asset
      */
-    public function asset(): Api\Asset
+    public function asset()
     {
         return new Api\Asset($this->httpClient, $this->hydrator, $this->requestBuilder);
     }
@@ -87,7 +85,7 @@ final class LocoClient
     /**
      * @return Api\Import
      */
-    public function import(): Api\Import
+    public function import()
     {
         return new Api\Import($this->httpClient, $this->hydrator, $this->requestBuilder);
     }
@@ -95,7 +93,7 @@ final class LocoClient
     /**
      * @return Api\Export
      */
-    public function export(): Api\Export
+    public function export()
     {
         return new Api\Export($this->httpClient, $this->hydrator, $this->requestBuilder);
     }

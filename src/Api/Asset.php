@@ -29,7 +29,7 @@ class Asset extends HttpApi
      *
      * @throws Exception
      */
-    public function create(string $projectKey, string $id)
+    public function create($projectKey, $id)
     {
         $param = [
             'name' => $id,
@@ -66,7 +66,7 @@ class Asset extends HttpApi
      *
      * @throws Exception\DomainException
      */
-    public function tag(string $projectKey, string $id, string $tag)
+    public function tag($projectKey, $id, $tag)
     {
         $param = [
             'name' => $tag,
@@ -99,7 +99,7 @@ class Asset extends HttpApi
      *
      * @throws Exception
      */
-    public function patch(string $projectKey, string $id, $type = null, $name = null, $context = null, $notes = null)
+    public function patch($projectKey, $id, $type = null, $name = null, $context = null, $notes = null)
     {
         $param = [
             'id' => $id,

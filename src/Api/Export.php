@@ -30,7 +30,7 @@ class Export extends HttpApi
      *
      * @throws Exception
      */
-    public function locale(string $projectKey, string $locale, string $ext, array $params)
+    public function locale($projectKey, $locale, $ext, array $params)
     {
         $params['key'] = $projectKey;
         $response = $this->httpGet(sprintf('/api/export/locale/%s.%s?%s', $locale, $ext, http_build_query($params)));

@@ -45,7 +45,7 @@ class Imported implements CreatableFromArray
     /**
      * @return array
      */
-    public function getAssets(): array
+    public function getAssets()
     {
         return $this->assets;
     }
@@ -61,7 +61,7 @@ class Imported implements CreatableFromArray
     /**
      * @return array
      */
-    public function getLocales(): array
+    public function getLocales()
     {
         return $this->locales;
     }

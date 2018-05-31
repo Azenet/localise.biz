@@ -31,7 +31,7 @@ class Import extends HttpApi
      *
      * @throws Exception
      */
-    public function import(string $projectKey, string $ext, string $body, array $params)
+    public function import($projectKey, $ext, $body, array $params)
     {
         $params['key'] = $projectKey;
         $response = $this->httpPostRaw(sprintf('/api/import/%s?%s', $ext, http_build_query($params)), $body);

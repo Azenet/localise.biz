@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -60,7 +58,7 @@ final class RequestBuilder
      *
      * @return RequestInterface
      */
-    public function create(string $method, string $uri, array $headers = [], $body = null): RequestInterface
+    public function create($method, $uri, array $headers = [], $body = null)
     {
         if (!is_array($body)) {
             return $this->requestFactory->createRequest($method, $uri, $headers, $body);
